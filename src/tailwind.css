@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hiddenElements {
+  @apply opacity-100 blur-sm transform translate-y-1/2 transition-all duration-1000;
+}
+
+.hiddenElements2 {
+  @apply opacity-100 blur-[5px] transform translate-y-1/2 transition-all duration-1000;
+}
+
+.show {
+  @apply opacity-100 blur-none transform translate-y-0;
+}
