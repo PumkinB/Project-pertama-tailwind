@@ -1,16 +1,12 @@
-let menuItems = document.getElementById("menu").children;
+// Active
+const activePage = window.location.pathname;
+console.log(activePage);
 
-for (let i = 0; i < menuItems.length; i++) {
-  menuItems[i].addEventListener("click", () => {
-    // hilangkan class ketika diklik
-    for (let j = 0; j < menuItems.length; j++) {
-      menuItems[j].classList.remove("bg-white");
-    }
-
-    // tambahkan class ketika di klik
-    menuItems[i].classList.add("bg-white");
-  });
-}
+const navLinks = document.querySelectorAll("ul li a").forEach((link) => {
+  if (link.href.includes(`${activePage}`)) {
+    link.parentElement.classList.add("bg-white");
+  }
+});
 
 // Saat masuk ke website ada animasi
 document.addEventListener("DOMContentLoaded", function () {

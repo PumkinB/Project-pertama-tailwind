@@ -6,6 +6,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.active {
+  @apply bg-white;
+}
+
 .hiddenElements {
   @apply opacity-100 blur-sm transform translate-y-1/2 transition-all duration-1000;
 }
